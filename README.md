@@ -4,7 +4,9 @@
 [![Hex version](https://img.shields.io/hexpm/v/nerves_system_rpi0.svg "Hex version")](https://hex.pm/packages/nerves_system_rpi0)
 
 This is the base Nerves System configuration for the Raspberry Pi Zero and
-Raspberry Pi Zero W.
+Raspberry Pi Zero W. See
+[`nerves_system_rpi3a`](https://github.com/nerves-project/nerves_system_rpi3a)
+for support for the Raspberry Pi Zero 2 W.
 
 If you are *not* interested in [Gadget Mode](http://www.linux-usb.org/gadget/)
 then check out
@@ -20,7 +22,7 @@ appropriate for your setup.
 | CPU                  | 1 GHz ARM1176JZF-S              |
 | Memory               | 512 MB                          |
 | Storage              | MicroSD                         |
-| Linux kernel         | 5.4 w/ Raspberry Pi patches     |
+| Linux kernel         | 5.10 w/ Raspberry Pi patches    |
 | IEx terminal         | UART `ttyAMA0` Can be changed to HDMI |
 | GPIO, I2C, SPI       | Yes - [Elixir Circuits](https://github.com/elixir-circuits) |
 | ADC                  | No                              |
