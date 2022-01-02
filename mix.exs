@@ -44,9 +44,9 @@ defmodule NervesSystemRpi0.MixProject do
   defp nerves_package do
     [
       type: :system,
-#      artifact_sites: [
-#        {:github_releases, "#{@github_organization}/#{@app}"}
-#      ],
+      artifact_sites: [
+        {:github_releases, "#{@github_organization}/#{@app}"}
+      ],
       build_runner_opts: build_runner_opts(),
       platform: Nerves.System.BR,
       platform_config: [
@@ -93,9 +93,10 @@ defmodule NervesSystemRpi0.MixProject do
 
   defp package do
     [
+      maintainers: ["Eric J. Christeson"],
       files: package_files(),
       licenses: ["Apache-2.0"],
-#      links: %{"GitHub" => @source_url}
+      links: %{"GitHub" => @source_url}
     ]
   end
 
