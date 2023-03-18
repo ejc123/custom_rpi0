@@ -12,6 +12,75 @@ follows:
    releases, and Linux kernel updates. They're also made to fix bugs and add
    features to the build infrastructure.
 
+## v1.22.1
+
+This is a bug fix and Erlang version bump from 25.2 to 25.2.3. It should be a
+low risk upgrade from v1.22.0.
+
+* Fixes
+  * Set Erlang crash dump timer to 5 seconds, so if an Erlang crash dump does
+    happen, it will run for at most 5 seconds. See erlinit.conf.
+
+* Updated dependencies
+  * [nerves_system_br v1.22.3](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.22.3)
+  * [Buildroot 2022.11.1](https://lore.kernel.org/buildroot/87ilh4dvax.fsf@dell.be.48ers.dk/T/#u)
+
+## v1.22.0
+
+This is a Buildroot version update that appears to mostly contain bug and
+security fixes. It should be a low risk upgrade from v1.21.2.
+
+* Updated dependencies
+  * [nerves_system_br v1.22.1](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.22.1)
+  * [Buildroot 2022.11](http://lists.busybox.net/pipermail/buildroot/2022-December/656980.html)
+  * GCC 12.2
+
+## v1.21.2
+
+* Changes
+  * Two Buildroot patch updates and an Erlang minor version update
+  * Nerves Heart v2.0 is now included. Nerves Heart connects the Erlang runtime
+    to a hardware watchdog. v2.0 has numerous updates to improve information
+    that you can get and also has more safeguards to avoid conditions that could
+    cause a device to hang forever.
+
+* Updated dependencies
+  * linux 5.15.78 (RPi 1.20221104)
+  * [nerves_system_br v1.21.6](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.21.6)
+  * [Erlang/OTP 25.2](https://erlang.org/download/OTP-25.2.README)
+  * [Buildroot 2022.08.3](https://lore.kernel.org/buildroot/87r0x7z5cw.fsf@dell.be.48ers.dk/T/#u)
+  * [nerves_heart v2.0.2](https://github.com/nerves-project/nerves_heart/releases/tag/v2.0.2)
+
+## v1.21.1
+
+* Changes
+  * Fix regression when building on x86_64 Linux where wrong toolchain was used.
+  * Reduce first-time Linux kernel download by using tarball source
+
+* Updated dependencies
+  * [nerves_system_br v1.21.2](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.21.2)
+  * [Erlang/OTP 25.1.2](https://erlang.org/download/OTP-25.1.2.README)
+
+## v1.21.0
+
+* Changes
+  * Support aarch64 Linux builds
+  * Add libdtc to support runtime loading of device tree overlays
+
+* Updated dependencies
+  * [nerves_system_br v1.21.1](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.21.1)
+    and also see [nerves_system_br v1.21.0](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.21.0)
+  * [Buildroot 2022.08.1](http://lists.busybox.net/pipermail/buildroot/2022-October/652816.html)
+  * [Erlang/OTP 25.1.1](https://erlang.org/download/OTP-25.1.1.README)
+
+## v1.20.2
+
+* Updated dependencies
+  * [nerves_system_br v1.20.6](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.20.6)
+  * [Erlang/OTP 25.0.4](https://erlang.org/download/OTP-25.0.4.README)
+  * [Buildroot 2022.05.2](http://lists.busybox.net/pipermail/buildroot/2022-August/650546.html)
+  * Also see [Buildroot 2022.05.1 changes](http://lists.busybox.net/pipermail/buildroot/2022-July/647814.html)
+
 ## v1.20.1
 
 * Updated dependencies
